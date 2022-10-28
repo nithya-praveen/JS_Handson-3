@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .qst
+        {
+            color: blue;
+        }
+        .ans
+        {
+            color: rgb(193, 9, 9);
+        }
+    </style>
+</head>
+<body>
+    <h1>Iteration statements</h1>
+    <b class="qst">Q1.</b>
+    <b class="ans">
+        Find the number of digits. Take a number from the user and print the count 
+        of digits in that number.
+    </b> <br><br>
+    <b class="qst">A1.</b> const Find_Digits = (N) => <br>
+    { <br>
+         var count=0; <br>
+        while(N>0) <br>
+        { <br>
+          N=parseInt(N/10); <br>
+          count++; <br>
+        } <br>
+        return count; <br>
+    }; <br> <br>
+    <b class="qst">Q2.</b>
+    <b class="ans">
+        Find the Fives.Among all the digits from 0−9, PrepBuddy likes number 5. He 
+        has a number and wants you to find out the number of times 5 occurred in the given number.
+    </b> <br> <br>
+    <b class="qst">A2.</b> const Find_Five = (N) => <br>
+    { <br>
+        let d=5; <br>
+             let count = 0; <br>
+                while (N > 0) <br>
+                { <br>
+                    count = (N % 10 == d) ? count + 1 : count; <br>
+                    N = parseInt(N / 10); <br>
+                } <br>
+                return count;  <br>
+    }; <br> <br>
+    <b class="qst">Q3.</b>
+    <b class="ans">
+        Find Sum.You are given an integer N and your task is to find the sum of all 
+        the even integers starting from 1 upto N(N inclusive).
+    </b>    <br><br>
+    <b class="qst">A3.</b> const findSum = (n) => <br>
+    { <br>
+        var sum = 0 ; <br>
+          for(var i=1;i<=n;i++) <br>
+             { <br>
+               if(i%2===0) <br>
+               { <br>
+                sum = sum + i; <br>
+               } <br>
+            } <br>
+          return sum; <br>
+    }; <br> <br>
+    <b class="qst">Q4.</b>
+    <b class="ans"> Find the sum of the digits of a given number.
+        Write a program that takes a number from the user and get the sum of the 
+        digits present in the number.
+        </b> <br><br>
+    <b class="qst">A4.</b> const Number_Sum = (N) =>  <br>
+    { <br>
+        var sum = 0 ; <br>
+        while (N !== 0) <br>
+         { <br>
+         sum = sum + N % 10; <br>
+         N = parseInt(N / 10); <br>
+        } <br>
+        return sum; <br>
+    }; <br> <br>
+    <b class="qst">Q5.</b>
+    <b class="ans"> Print the Odds. Write a program which takes  a number from user
+         and print all odd numbers in between 2 and N, but print 2 first.
+         </b> <br><br>
+         <b class="qst">A5.</b> const Print_Odd = (N) => <br>
+         { <br>
+             for(let  i = 2 ; i <= N ; i++) <br>
+                   { <br>
+                      if( i == 2 || i % 2 ===1) <br>
+                      { <br>
+                       console.log(i); <br>
+                      } <br>
+                   } <br>
+        }; <br><br>
+    <b class="qst">Q6.</b>
+    <b class="ans"> Print the Pattern.Write a program which ask user for no of lines
+         and print a pattern using an asterik .  
+         </b> <br><br>
+    <b class="qst">A6.</b> const Print_pattern = (N) => <br>
+    { <br>
+      for(var i=1; i<=N; i++) <br>
+        { <br>
+            for(var j=1; j<=i; j++) <bR>
+         { <br>
+            process.stdout.write("*"); <br>
+        } <Br>
+        process.stdout.write("\n"); <br>
+        } <br>
+    };  <br> <br>
+    <b class="qst">Q7.</b>
+    <b class="ans"> Check whether a Number is a prime or not.
+        Write a program which takes  a number from user and check whether number is 
+        prime number or not a prime number.
+   </b> <br><br>
+   <b class="qst">A7.</b>  const Prime_Check = (N) =>  <br>
+   { <br>
+        var count = 0; <br>
+     for (let i = 1; i <= N; i++) <br>
+     { <Br>
+       if (N % i === 0) <br>
+       { <Br>
+         count++; <br>
+       } <br>
+     } <br>         
+         if(count == 2) <br>
+         { <br>
+           return "YES"; <br>
+         } <br>
+         else <Br>
+         { <br>
+           return "NO"; <br>
+         } <br>
+   };  <br> <br>    
+   <b class="qst">Q8.</b>
+   <b class="ans"> Print Numbers
+    You are given an integer N, and your task is to print all the integers starting 
+    from 1 till N(N inclusive).
+    </b> <br><br>
+    <b class="qst">A8.</b> const printNumbers = (n) => <br>
+    { <br>
+        for(var i=1;i<=n;i++) <br>
+        { <br>
+         console.log(i); <br>
+        } <br>
+    }; <br> <br>
+    <b class="qst">Q9.</b>
+   <b class="ans"> Print the Table
+    Write a program which takes a number from user and print the table.
+    </b> <br><br>
+    <b class="qst">A9.</b> const Print_Table = (N) =>  <br>
+    { <br>
+        for(let i=1;i<=10;i++) <br>
+        { <br>
+         console.log(N+  "  *  "  +i+  "  =  "  +i*N); <br>
+        } <br>
+    }; 
+</body>
+</html>
